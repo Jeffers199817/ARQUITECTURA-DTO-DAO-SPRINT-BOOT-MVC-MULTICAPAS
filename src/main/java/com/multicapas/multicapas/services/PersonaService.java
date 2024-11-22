@@ -1,0 +1,26 @@
+package com.multicapas.multicapas.services;
+
+import com.multicapas.multicapas.model.Persona;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class PersonaService implements IPersonaService {
+    //Métodos para lógica de nogocio
+    @Override
+    public void createPersona(Persona per) {
+
+        System.out.println("Persona created");
+
+    }
+
+    @Override
+    public List<Persona> traerPersonas() {
+
+        //acá deberia devolver la lista de personas
+        return List.of();
+    }
+
+
+}
