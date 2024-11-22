@@ -12,6 +12,7 @@ public class PersonaService implements IPersonaService {
     public void createPersona(Persona per) {
 
         System.out.println("Persona created");
+        System.out.println("Creado exitosamente");
 
     }
 
@@ -20,6 +21,7 @@ public class PersonaService implements IPersonaService {
 
         //acá deberia devolver la lista de personas
         return List.of();
+
     }
 
 
