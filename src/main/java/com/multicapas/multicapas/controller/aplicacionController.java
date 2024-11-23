@@ -2,9 +2,11 @@ package com.multicapas.multicapas.controller;
 
 import com.multicapas.multicapas.model.Basquet;
 import com.multicapas.multicapas.model.Posteo;
+import com.multicapas.multicapas.model.Triangulo;
 import com.multicapas.multicapas.repository.IBasquetRepository;
 import com.multicapas.multicapas.repository.IPosteoRepository;
 import com.multicapas.multicapas.repository.IPromedioNotaRepository;
+import com.multicapas.multicapas.repository.ITrianguloRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,4 +45,17 @@ public class aplicacionController {
         return basquetRepository.crearListaJugadores(basquetsAux);
     }
 
+
+
+    @Autowired
+    ITrianguloRepository trianguloRepository;
+    @GetMapping("/triangulo/{lado}/{altura}")
+    public String crearTriangulo(@PathVariable double lado, @PathVariable double altura) {
+        Triangulo triangulo = new Triangulo();
+        triangulo.setBase(lado);
+        triangulo.setAltura(altura);
+        return trianguloRepository.calcularArea(triangulo);
+
+
+    }
 }
