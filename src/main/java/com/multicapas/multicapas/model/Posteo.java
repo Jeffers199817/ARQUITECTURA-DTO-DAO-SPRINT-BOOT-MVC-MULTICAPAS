@@ -9,9 +9,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Persona {
+public class Posteo {
     private Long id;
-    private String nombre;
-    private String apellido;
+    private String titulo;
+    private String autor;
 
 }

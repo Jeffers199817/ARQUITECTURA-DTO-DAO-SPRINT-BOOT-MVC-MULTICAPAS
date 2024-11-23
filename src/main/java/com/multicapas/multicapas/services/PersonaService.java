@@ -1,6 +1,6 @@
 package com.multicapas.multicapas.services;
 
-import com.multicapas.multicapas.model.Persona;
+import com.multicapas.multicapas.model.Posteo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 public class PersonaService implements IPersonaService {
     //Métodos para lógica de nogocio
     @Override
-    public void createPersona(Persona per) {
+    public void createPersona(Posteo per) {
 
         System.out.println("Persona created");
         System.out.println("Creado exitosamente");
@@ -17,7 +17,7 @@ public class PersonaService implements IPersonaService {
     }
 
     @Override
-    public List<Persona> traerPersonas() {
+    public List<Posteo> traerPersonas() {
 
         //acá deberia devolver la lista de personas
         return List.of();
