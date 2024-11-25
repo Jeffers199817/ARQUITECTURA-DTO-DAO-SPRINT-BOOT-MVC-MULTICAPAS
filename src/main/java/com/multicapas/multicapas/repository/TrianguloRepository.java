@@ -10,6 +10,6 @@ public class TrianguloRepository implements ITrianguloRepository {
     public String calcularArea(Triangulo triangulo) {
 
         double calculoArea = (triangulo.getAltura() * triangulo.getBase())/2;
-        return "El área del triangulo es: "+  calculoArea;
+        return "La base es: "+   triangulo.getBase()+ "La altura es: " + triangulo.getAltura() + "El área del triangulo es: "+  calculoArea;
     }
 }
